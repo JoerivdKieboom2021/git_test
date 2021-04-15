@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git and Github</title>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 25px;
+        }
+
+        a {
+            color: crimson;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Testing out GIT and Github</h1>
+    <a href="https://www.youtube.com/watch?v=RGOj5yH7evk&ab_channel=freeCodeCamp.org" target="_blank">Video from
+        FreeCodeCamp</a>
+    <h2>Terms</h2>
+    <ul>
+        <li>
+            <strong>Directory</strong> - Folder
+        </li>
+        <li>
+            <strong>Terminal or Command Line</strong>- Interface for Text Commands
+        </li>
+        <li>
+            <strong>CLI</strong> - Command Line Interface
+        </li>
+        <li>
+            <strong>cd</strong> - Change Directory
+        </li>
+        <li>
+            <strong>Code Editor</strong> - Word Processor for Writing Code <i>(Visual Studio Code)</i>
+        </li>
+        <li>
+            <strong>Repository</strong> - Project, or the folder/place where your project is kept
+        </li>
+        <li>
+            <strong>Github</strong> - A website to host your repositories online
+        </li>
+    </ul>
+
+    <h2>Git Commands</h2>
+    <ul>
+        <li>
+            <strong>status</strong> - Checks which files aren't tracked and which are tracked to commit.
+        </li>
+        <li>
+            <strong>clone</strong> - Bring a repository that is hosted somewhere like Github into a folder onto your
+            local machine
+        </li>
+        <li>
+            <strong>add</strong> - Track your files and changes in Git
+        </li>
+        <li>
+            <strong>commit</strong> - Save your files in Git
+        </li>
+        <li>
+            <strong>commit -m</strong> - The -m stands for message, add another -m is for the description
+        </li>
+        <li>
+            <strong>commit -am</strong> - this is used when a file is already added and the file is modified (shortcut)
+        </li>
+        <li>
+            <strong>push</strong> - Upload Git commit to a remote repository, like Github
+        </li>
+        <li>
+            <strong>pull</strong> - Download changes from remote repository to your local machine, the opposite of push
+        </li>
+        <li>
+            <strong>remote -v</strong> - show which repositories are connected to this folder.
+        </li>
+        <li>
+            <strong>push -u origin master</strong> - this will set it so it pushes to the master branch, and afterwards
+            you are able to use only push. (u = upstream)
+        </li>
+    </ul>
+
+    <h2>Github Workflow</h2>
+    <p>
+        Write Code <br>
+        &darr; <br>
+        Commit Changes <br>
+        &darr; <br>
+        Make a Pull Request
+    </p>
+
+    <h2>Local Git Workflow</h2>
+    <p>
+        Write Code <br>
+        &darr; <br>
+        Stage Changes (git add) <br>
+        &darr; <br>
+        Commit Changes (git commit) <br>
+        &darr; <br>
+        Push Changes (git push) <br>
+        &darr; <br>
+        Make a pull request
+    </p>
+
+    <h2>Git Branching</h2>
+    <p>
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;
+        &#8599; Hotfix Commit &#8600; <br>
+        Commit 1 &rarr; Commit 2 &rarr; Commit 3 &rarr; Commit 4 &rarr; Commit 5 <br>
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &#8600; Feature Commit 1 &rarr;
+        &nbsp; Feature Commit 2 &#8599;
+    </p>
+    <p>
+    <ul>
+        <li>
+            <strong>Master branch</strong> - Commit 1 / Commit 2 / etc...
+        </li>
+        <li>
+            <strong>Feature branch</strong> - feature commit 1 / feature commit 2 / etc...
+        </li>
+        <li>
+            <strong>Hotfix branch</strong> - Hotfix Commit / etc..
+        </li>
+    </ul>
+    A feature branch is usefull to test out different outcomes without changing the master branch (or main) <br>
+    Eventually you have to merge it back to the main when you are done with your feature or hotfix. <br>
+    But this is very usefull to use without screwing up your main project.
+    </p>
+
+    <h2>Git commands 1.1</h2>
+    <p>
+    <ul>
+        <li>
+            <strong>git branch</strong> - This is to check which branch you are currently in and which branches there
+            currently are, when there are muliple ones
+        </li>
+        <li>
+            <strong>git checkout</strong> - this is used to switch between branches
+        </li>
+        <li>
+            <strong>git checkout -b</strong> - this is used to make a new branch (feature-moving-image; example)
+        </li>
+        <li>
+            <strong>git branch -d</strong> - this is used to delete your branchname
+        </li>
+        <li>
+            <strong>git diff</strong> - this is used to see the changes that are made between files/ branches
+        </li>
+        <li>
+            <strong>git merge</strong> - this is used to merge with the main/master branch again
+        </li>
+        <li>
+            <strong>git push -u origin</strong> - This is used to add the new branch to your github repository
+        </li>
+        <li>
+            <strong>git pull</strong> - this is used to get the updated version from github when someone made changes
+            and you dont have them yet
+        </li>
+        <li>
+            <strong>pull request</strong> - this is used on Github to merge is with the main or master branch <br>
+            inside this pull request you are able to add more comments on why you did something
+        </li>
+    </ul>
+    </p>
+    <h2>Extra Info</h2>
+    <p>
+        If you dont have an upstream yet then you should use <strong>git pull -u origin</strong> branchname
+    </p>
+    <p>
+        Don't reuse branches that you already have used <br>
+        If you've used one branch then you should remove the old branch with <strong>git branch -d</strong> branchname
+        and afterwards create a new one for a next feature or hotfix
+    </p>
+    <p>
+        When a file is status : <strong>modified</strong> then you coud use a shortcut command <br>
+        <strong>git commit -am</strong> "then add message here"
+    </p>
+    <p>
+        But when a file is newly created then you have to use <strong>git add</strong> first
+        and <strong>git commit -m</strong> "message" to let it know <br>
+        After you have done this you are able to use the shortcut <strong>git commit -am</strong>
+        when the status says its modified again (this saves time)
+    </p>
+    <p>
+        Locally merge is used to update your feature branch with the master <strong>(Command line)</strong><br>
+        This is mainly used when you are working on a project and other people made a change and
+        pushed it to the master and you dont have the updated version yet
+    </p>
+
+    <h2>Git Commands 1.2</h2>
+    <ul>
+        <li>
+            <strong>git reset</strong> - to reset all of staged files
+        </li>
+        <li>
+            <strong>git reset *filename*</strong> - to reset the current staged filename <br>
+            example;
+            <strong>git status</strong> <br>
+            staged files :
+            <ul>
+                <li>README.md</li>
+                <li>index.html</li>
+            </ul>
+            <strong>git reset index.html</strong> <br>
+            This will remove the index.html from staging <br>
+            <strong>git status</strong> <br>
+            staged files :
+            <ul>
+                <li>README.md</li>
+            </ul>
+        </li>
+        <li>
+            <strong>git reset HEAD</strong> - undo the last commit you did
+        </li>
+        <li>
+            <strong>git reset HEAD~1</strong> - undo the commit before your last commit
+        </li>
+        <li>
+            <strong>git log</strong> - is a log that shows all of your commits you did <br>
+            this is also displayed from latest to first <br>
+            example; <br>
+            <ul>
+                <li>
+                    commit - hashcode <br>
+                    Merge : if its merged <br>
+                    Author : Who did the commit <br>
+                    Date : Fri Feb 05 timestamp 2021 -somecode <br><br>
+                    your commit message
+                    <hr>
+                </li>
+                <li>
+                    commit - hashcode <br>
+                    Author : Who did the commit <br>
+                    Date : Fri Feb 03 timestamp 2021 -somecode <br><br>
+                    your commit message
+                    <hr>
+                </li>
+                <li>
+                    commit - hashcode <br>
+                    Author : Who did the commit <br>
+                    Date : Fri Feb 02 timestamp 2021 -somecode <br><br>
+                    your commit message
+                    <hr>
+                </li>
+                <li>
+                    commit - hashcode <br>
+                    Author : Who did the commit <br>
+                    Date : Fri Feb 01 timestamp 2021 -somecode <br><br>
+                    your commit message etc etc..
+                    <hr>
+                </li>
+            </ul>
+            So if you want to return to a specific commit you could copy one of those specific hash codes <br>
+            This could be used when you did something and its not working good and you want to have the previous
+            working version
+        </li>
+        <li>
+            <strong>git reset --hard</strong> - <strong>BE CAREFULL!</strong> this is a hard reset
+            Where you delete all your previous commits and return to the specific hashcoded commit
+        </li>
+    </ul>
+
+    <h2>Extra Info</h2>
+    <p>
+        Want to change things to a specific Github repository then you should use the fork symbol on Github <br>
+        What this does ? <br>
+        It basicly gives you a copy of that Github repository <br>
+        BUT its under your name and you are the owner <br>
+        So then you could change the code without screwing everyone over when you've made a change
+    </p>
+
+</body>
+
+</html>
